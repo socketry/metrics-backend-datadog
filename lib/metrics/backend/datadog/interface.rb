@@ -31,7 +31,7 @@ module Metrics
 	module Backend
 		module Datadog
 			def self.new
-				instance = ::Datadog::Statsd.new('localhost', 8125, logger: Console.logger)
+				instance = ::Datadog::Statsd.new('localhost', 8125, logger: ::Console.logger)
 				
 				at_exit do
 					self.close
