@@ -4,8 +4,6 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem "metrics", path: "../metrics"
-
 group :test do
 	gem "console"
 	gem "async-io"
