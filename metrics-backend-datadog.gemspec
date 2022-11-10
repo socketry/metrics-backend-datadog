@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require_relative "lib/metrics/backend/datadog/version"
 
@@ -14,10 +15,13 @@ Gem::Specification.new do |spec|
 	
 	spec.homepage = "https://github.com/socketry/metrics-backend-datadog"
 	
-	spec.files = Dir.glob('{lib}/**/*', File::FNM_DOTMATCH, base: __dir__)
+	spec.files = Dir.glob(['{lib}/**/*', '*.md'], File::FNM_DOTMATCH, base: __dir__)
 	
 	spec.add_dependency "dogstatsd-ruby", "~> 5.0"
 	spec.add_dependency "metrics"
 	
-	spec.add_development_dependency "rspec", "~> 3.0"
+	spec.add_development_dependency "bake-test"
+	spec.add_development_dependency "covered"
+	spec.add_development_dependency "sus"
+	spec.add_development_dependency "sus-fixtures-async"
 end

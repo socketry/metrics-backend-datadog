@@ -2,7 +2,7 @@
 
 A metrics backend for Datadog.
 
-[![Development Status](https://github.com/socketry/metrics-backend-datadog/workflows/Development/badge.svg)](https://github.com/socketry/metrics-backend-datadog/actions?workflow=Development)
+[![Development Status](https://github.com/socketry/metrics-backend-datadog/workflows/Test/badge.svg)](https://github.com/socketry/metrics-backend-datadog/actions?workflow=Test)
 
 ## Usage
 
@@ -43,7 +43,7 @@ We welcome contributions to this project.
 
 ## See Also
 
-- [metrics](https://github.com/socketry/metrics) — Capture metrics about code execution in a vendor agnostic way.
+  - [metrics](https://github.com/socketry/metrics) — Capture metrics about code execution in a vendor agnostic way.
 
 ## License
 
