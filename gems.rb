@@ -7,15 +7,20 @@ source 'https://rubygems.org'
 
 gemspec
 
-group :test do
-	gem "console"
-	gem "async-io"
-	gem "async-rspec"
-end
-
 group :maintenance, optional: true do
 	gem "bake-modernize"
 	gem "bake-gem"
 	
 	gem "utopia-project"
+end
+
+group :test do
+	gem "sus"
+	gem "covered"
+	gem "decode"
+	gem "rubocop"
+	
+	gem "sus-fixtures-async"
+	
+	gem "bake-test"
 end

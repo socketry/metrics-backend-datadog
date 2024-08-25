@@ -15,13 +15,15 @@ Gem::Specification.new do |spec|
 	
 	spec.homepage = "https://github.com/socketry/metrics-backend-datadog"
 	
+	spec.metadata = {
+		"documentation_uri" => "https://socketry.github.io/metrics-backend-datadog/",
+		"source_code_uri" => "https://github.com/socketry/metrics-backend-datadog.git",
+	}
+	
 	spec.files = Dir.glob(['{lib}/**/*', '*.md'], File::FNM_DOTMATCH, base: __dir__)
+	
+	spec.required_ruby_version = ">= 3.1"
 	
 	spec.add_dependency "dogstatsd-ruby", "~> 5.0"
 	spec.add_dependency "metrics"
-	
-	spec.add_development_dependency "bake-test"
-	spec.add_development_dependency "covered"
-	spec.add_development_dependency "sus"
-	spec.add_development_dependency "sus-fixtures-async"
 end
