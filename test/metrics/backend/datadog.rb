@@ -31,7 +31,7 @@ describe Metrics do
 	with "mock server" do
 		include Sus::Fixtures::Async::ReactorContext
 		
-		let(:host) {"localhost"}
+		let(:host) {"127.0.0.1"}
 		let(:port) {8125}
 		
 		let(:packets) {Async::Queue.new}
