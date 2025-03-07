@@ -15,6 +15,7 @@ end
 
 Metrics::Provider(MyClass) do
 	MYCLASS_CALL_COUNT = Metrics.metric('my_class.call', :counter, description: 'Call counter.')
+	MYCLASS_CALL_DISTRIBUTION = Metrics.metric('my_class.call', :distribution, description: 'Call distribution.')
 	
 	def my_method(argument)
 		MYCLASS_CALL_COUNT.emit(1, tags: ["foo", "bar"])
@@ -26,6 +27,10 @@ end
 describe Metrics do
 	it "has a version number" do
 		expect(Metrics::VERSION).to be =~ /\d+\.\d+\.\d+/
+	end
+	
+	it "supports distributions" do
+		expect(MYCLASS_CALL_DISTRIBUTION).to be_a(Metrics::Backend::Datadog::Distribution)
 	end
 	
 	with "mock server" do

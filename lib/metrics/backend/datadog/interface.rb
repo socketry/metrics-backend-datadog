@@ -65,7 +65,7 @@ module Metrics
 				def metric(name, type, description: nil, unit: nil)
 					klass = Metric
 					
-					case name
+					case type
 					when :counter
 						# klass = Metric
 					when :guage
